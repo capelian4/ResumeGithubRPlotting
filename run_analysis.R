@@ -1,32 +1,32 @@
 ##R script called run_analysis.R
 
-subject_test <- read.table("C:/Users/CA/Downloads/HAR/1/test/subject_test.txt", quote=""", comment.char="")
+subject_test <- read.table("C:/Users/CA/Downloads/HAR/1/test/subject_test.txt", quote="", comment.char="")
 
 View(subject_test)
 
-X_test <- read.table("C:/Users/CA/Downloads/HAR/1/test/X_test.txt", quote=""", comment.char="")
+X_test <- read.table("C:/Users/CA/Downloads/HAR/1/test/X_test.txt", quote="", comment.char="")
 
 View(X_test)
 
-y_test <- read.table("C:/Users/CA/Downloads/HAR/1/test/y_test.txt", quote=""", comment.char="")
+y_test <- read.table("C:/Users/CA/Downloads/HAR/1/test/y_test.txt", quote="", comment.char="")
 
 View(y_test)
 
-subject_train <- read.table("C:/Users/CA/Downloads/HAR/1/train/subject_train.txt", quote=""", comment.char="")
+subject_train <- read.table("C:/Users/CA/Downloads/HAR/1/train/subject_train.txt", quote="", comment.char="")
 
 View(subject_train)
 
-X_train <- read.table("C:/Users/CA/Downloads/HAR/1/train/X_train.txt", quote=""", comment.char="")
+X_train <- read.table("C:/Users/CA/Downloads/HAR/1/train/X_train.txt", quote="", comment.char="")
 
 View(X_train)
 
-y_train <- read.table("C:/Users/CA/Downloads/HAR/1/train/y_train.txt", quote=""", comment.char="")
+y_train <- read.table("C:/Users/CA/Downloads/HAR/1/train/y_train.txt", quote="", comment.char="")
 
 View(y_train)
 
-features <- read.table("C:/Users/CA/Downloads/HAR/1/features.txt", quote=""", comment.char="")
+features <- read.table("C:/Users/CA/Downloads/HAR/1/features.txt", quote="", comment.char="")
 
-activity_labels <- read.table("C:/Users/CA/Downloads/HAR/1/activity_labels.txt", quote=""", comment.char="")
+activity_labels <- read.table("C:/Users/CA/Downloads/HAR/1/activity_labels.txt", quote="", comment.char="")
 
 View(activity_labels)
 
