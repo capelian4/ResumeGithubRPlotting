@@ -30,6 +30,10 @@ activity_labels <- read.table("C:/Users/CA/Downloads/HAR/1/activity_labels.txt",
 
 View(activity_labels)
 
+names(subject_train)[1] <- "Subject"
+
+names(subject_test)[1] <- "Subject"
+
 Subject <- rbind(subject_train, subject_test)
 
 X <- rbind(X_train, X_test)
