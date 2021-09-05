@@ -62,8 +62,6 @@ Y <- rbind(YMean, Y_SD)
 
 Data2 <- cbind(Subject, X_SD, Y_SD)
 
-Data2 <- cbind(features, X_SD, Y_SD)
-
 names(Data2)[3-50] <- "SD"
 
 names(Data2)[1] <- "Incident"
