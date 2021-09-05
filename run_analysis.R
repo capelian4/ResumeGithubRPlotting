@@ -1,4 +1,5 @@
 ##R script called run_analysis.R
+##R script called run_analysis.R
 > library(data.table)
 > library(dplyr)
 > library(tidyr)
@@ -72,15 +73,21 @@ names(Data2)[47] <- "SD"
 
 Data3 <- cbind(activity_labels, X_SD, Y_SD)
 
+names(Data3)[3-50] <- "SD"
+
+names(Data3)[1] <- "Incident"
+
+names(Data3)[2] <- "Activities"
+
 Data4 <- colMeans(Data3[sapply(Data3, is.numeric)])
 
 View(Data4)
 
 Data5 <- Data3[, c("SD")]
 
-Data6 <- cbind(activity_labels, Data4)
+Data6 <- cbind(activity_labels, Data5)
 
-View(Data5)
+View(Data6)
 
 names(Data6)[1] <- "Activity_No."
 
