@@ -45,6 +45,7 @@ activity_labels <- read.table("C:/Users/CA/Downloads/HAR/1/activity_labels.txt",
 
 View(activity_labels)
 
+
 ##1. I merged the training and the test sets to create one data set.
 
 names(subject_train)[1] <- "Subject"
@@ -77,7 +78,7 @@ Data2 <- cbind(Subject, X_SD, Y_SD)
 
 ##3. I used Data2 the descriptive activity names in the features file to name the activities in the data set preserving anonymity by not including references to Subjects.
 
-Data2 <- cbind(features, X_SD, Y_SD)
+Data2 <- cbind(Subject, X_SD, Y_SD)
 
 ##4. I labeled Data2 with descriptive variable names – I choose Standard Deviation or “SD” and to keep the features nomenclature as it related to the original 
 ##datasets so researchers could find the information in the raw data, as necessary. I used this website: https://www.statology.org/how-to-rename-data-frame-columns-in-r/
@@ -93,27 +94,34 @@ names(Data2)[47] <- "SD"
 ##From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 ##I decided to not identify subjects, to preserve anonymity and to focus on the necessary data: SD, which is “Standard Deviation” for each activity. 
 ##Therefore, it is my argument that a tidy dataset should not contain Subject information to be more scientific. 
-##I then saved my last dataset (Data5) as a text after installing writeexl and using the write.xlsx function. 
+##I then saved my last dataset (Data6) as a text after installing writeexl and using the write.xlsx function. 
 ##Since I have a PC, I can use my Excel to save the data as a text and an .xls file I can manipulate later using Excel, if I choose.
 
 Data3 <- cbind(activity_labels, X_SD, Y_SD)
 
-Data4 <- colMeans(Data4[sapply(Data4, is.numeric)])
+names(Data3)[3-50] <- "SD"
+
+names(Data3)[1] <- "Incident"
+
+names(Data3)[2] <- "Activities"
+
+Data4 <- colMeans(Data3[sapply(Data3, is.numeric)])
 
 View(Data4)
 
-Data4 <- Data3[, c("SD")]
+Data5 <- Data3[, c("SD")]
 
-Data5 <- cbind(activity_labels, Data4)
+Data6 <- cbind(activity_labels, Data5)
 
-View(Data5)
+View(Data6)
 
-names(Data5)[1] <- "Activity_No."
+names(Data6)[1] <- "Activity_No."
 
-names(Data5)[2] <- "Activity"
+names(Data6)[2] <- "Activity"
 
-names(Data5)[3] <- "SD"
+names(Data6)[3] <- "SD"
 
 installed.packages(writexl)
 
-write_xlsx(Data5,"C:\Users\CA\Documents\Data6.xlsx")
+write_xlsx(Data6,"C:\Users\CA\Documents\Data6.xlsx")
+
