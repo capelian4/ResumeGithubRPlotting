@@ -72,7 +72,7 @@ names(Data2)[47] <- "SD"
 
 Data3 <- cbind(activity_labels, X_SD, Y_SD)
 
-Data4 <- colMeans(Data4[sapply(Data4, is.numeric)])
+Data4 <- colMeans(Data3[sapply(Data3, is.numeric)])
 
 View(Data4)
 
