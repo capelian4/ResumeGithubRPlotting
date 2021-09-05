@@ -1,7 +1,14 @@
 ##R script called run_analysis.R
 
 ##I read about the project at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones then loaded R packages
-using the lower left pane: data.table, dplyr, ggplot2, git2r, lubridate, magrittr, plyr, readr, readxl, stringr, tidyr, writeexl
+using the lower left pane
+
+> library(data.table)
+> library(dplyr)
+> library(tidyr)
+> library(magrittr)
+> library(readxl)
+> library(writexl)
 
 ##I downloaded the data set and saved it as HAR.zip from this website and read the ReadMe file
 
