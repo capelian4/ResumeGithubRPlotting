@@ -76,18 +76,18 @@ Data4 <- colMeans(Data3[sapply(Data3, is.numeric)])
 
 View(Data4)
 
-Data4 <- Data3[, c("SD")]
+Data5 <- Data3[, c("SD")]
 
-Data5 <- cbind(activity_labels, Data4)
+Data6 <- cbind(activity_labels, Data4)
 
 View(Data5)
 
-names(Data5)[1] <- "Activity_No."
+names(Data6)[1] <- "Activity_No."
 
-names(Data5)[2] <- "Activity"
+names(Data6)[2] <- "Activity"
 
-names(Data5)[3] <- "SD"
+names(Data6)[3] <- "SD"
 
 installed.packages(writexl)
 
-write_xlsx(Data5,"C:\Users\CA\Documents\Data6.xlsx")
+write_xlsx(Data6,"C:\Users\CA\Documents\Data6.xlsx")
