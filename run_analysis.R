@@ -1,14 +1,9 @@
 ##R script called run_analysis.R
 > library(data.table)
 > library(dplyr)
-> library(ggplot2)
-> library(git2r)
-> library(magrittr)
-> library(plyr)
-> library(readr)
-> library(readxl)
-> library(stringr)
 > library(tidyr)
+> library(magrittr)
+> library(readxl)
 > library(writexl)
 
 subject_test <- read.table("C:/Users/CA/Downloads/HAR/1/test/subject_test.txt", quote="", comment.char="")
