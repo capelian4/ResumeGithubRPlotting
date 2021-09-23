@@ -15,9 +15,9 @@ X_test <- read.table("C:/Users/CA/Downloads/HAR/1/test/X_test.txt", quote="", co
 
 View(X_test)
 
-y_test <- read.table("C:/Users/CA/Downloads/HAR/1/test/y_test.txt", quote="", comment.char="")
+Y_test <- read.table("C:/Users/CA/Downloads/HAR/1/test/y_test.txt", quote="", comment.char="")
 
-View(y_test)
+View(Y_test)
 
 subject_train <- read.table("C:/Users/CA/Downloads/HAR/1/train/subject_train.txt", quote="", comment.char="")
 
