@@ -27,9 +27,9 @@ X_train <- read.table("C:/Users/CA/Downloads/HAR/1/train/X_train.txt", quote="",
 
 View(X_train)
 
-y_train <- read.table("C:/Users/CA/Downloads/HAR/1/train/y_train.txt", quote="", comment.char="")
+Y_train <- read.table("C:/Users/CA/Downloads/HAR/1/train/y_train.txt", quote="", comment.char="")
 
-View(y_train)
+View(Y_train)
 
 features <- read.table("C:/Users/CA/Downloads/HAR/1/features.txt", quote="", comment.char="")
 
@@ -41,9 +41,10 @@ names(subject_train)[1] <- "Subject"
 
 names(subject_test)[1] <- "Subject"
 
-Subject <- rbind(subject_train, subject_test)
+subject <- rbind(subject_train, subject_test)
 
 X <- rbind(X_train, X_test)
+***
 
 Y <- rbind(y_train, y_test)
 
